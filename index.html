@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>College Football Top 28 Ballot · Custom write-in teams</title>
+<style>
+:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#13273c;background:#eff4f8}*{box-sizing:border-box}
+body{margin:0}.shell{max-width:1220px;margin:26px auto;padding:0 18px}.hero{background:linear-gradient(120deg,#10263e,#17496a);color:white;border-radius:16px;padding:26px 30px;margin-bottom:18px}.hero h1{margin:0 0 9px;font-size:clamp(23px,4vw,35px)}.hero p{margin:4px 0;color:#cce0ec}.layout{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(290px,.8fr);gap:20px;align-items:start}.panel{background:white;border:1px solid #d8e3eb;box-shadow:0 7px 22px #1234  ;border-radius:14px;padding:18px}.panel h2{margin:0 0 8px;font-size:19px}.hint{font-size:13px;color:#536475;line-height:1.5}.tableHead{display:grid;grid-template-columns:60px 1fr;gap:9px;margin:15px 0 7px;color:#4c6478;font-size:12px;text-transform:uppercase;font-weight:700}.ranking{display:grid;gap:6px}.slot{display:grid;grid-template-columns:60px 1fr;gap:9px;align-items:stretch;min-height:41px}.rank{display:flex;align-items:center;justify-content:center;background:#eaf1f7;color:#164264;border-radius:7px;font-weight:750}.team{display:flex;align-items:center;gap:8px;border:1px solid #d6e2ea;border-radius:8px;background:white;padding:7px 10px;cursor:grab;min-width:0;touch-action:pan-y}.team:active{cursor:grabbing}.team .name{font-weight:650;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.muted{font-size:11px;color:#647789}.grip{color:#8da0ae;font-size:19px;line-height:1}.slot.over .team,.bench.over{outline:3px dashed #3883a9;background:#eaf6fc}.bench{display:grid;gap:9px;margin:16px 0}.bench .team{min-height:42px}.controls{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}.team .name{min-width:105px}.controls button{white-space:nowrap}.controls button{border:1px solid #d4e0e7;background:#f3f8fb;color:#22506c;border-radius:5px;cursor:pointer;padding:5px 7px;font-weight:700}.controls button:hover{background:#ddebfa}.field{margin-top:18px}.field label{display:block;font-weight:700;margin-bottom:6px;font-size:14px}.field input{width:100%;padding:12px;border:1px solid #b9cbd7;border-radius:7px;font:inherit}.submit{margin-top:15px;border:0;background:#11704d;color:#fff;border-radius:9px;padding:14px 20px;width:100%;font:inherit;font-weight:750;cursor:pointer}.submit:hover{background:#0b593c}.secondary{border:1px solid #b9cbd7;background:#fff;border-radius:8px;padding:10px 14px;cursor:pointer}.status{margin:12px 0 0;font-size:13px;color:#42627c}.source{font-size:12px;color:#607284;margin-top:15px;line-height:1.5}.source a{color:#225c83}.onlyprint{display:none}.footer{margin:23px auto;color:#63788a;text-align:center;font-size:12px}@media(max-width:720px){.layout{grid-template-columns:1fr}.shell{margin:10px auto}.hero{padding:22px}.panel{padding:13px}.team{padding:7px}.controls button{padding:4px 6px}}@media print{@page{size:letter;margin:.5in}body{background:#fff}.shell,.footer{display:none!important}.onlyprint{display:block!important;font-family:Arial,sans-serif;color:#111}.printhead{border-bottom:2px solid #111;padding-bottom:7px;margin-bottom:10px}.printhead h1{font-size:21px;margin:0 0 6px}.printhead p{font-size:11px;margin:4px 0}.printed{width:100%;border-collapse:collapse;font-size:12px}.printed th,.printed td{padding:4px 8px;border-bottom:1px solid #ccc;text-align:left}.printed th:first-child,.printed td:first-child{width:65px}.printfoot{font-size:10px;margin-top:14px;color:#555}}
+</style>
+</head>
+<body>
+<div class="shell"><div class="hero"><h1>🏈 Your College Football Top 28</h1><p>2026 AP poll baseline · released September 20, 2026</p><p>Move teams up or down, drag an unranked team into a ranked position, then create your PDF ballot.</p></div>
+<div class="layout"><section class="panel"><h2>Your rankings</h2><div class="hint">Drag teams to reorder, use ↑ and ↓, or click “Type team” on any ranking row to add a team that isn’t in the Top 30. Your changes are saved in this browser.</div><div class="tableHead"><span>Rank</span><span>Team</span></div><div class="ranking" id="rankings"></div></section>
+<aside class="panel"><h2>Available teams</h2><div class="hint">Start with the AP Top 30, or add any other FBS team below. Drag it into your rankings or click “Type team” next to a rank to enter it directly.</div><div id="bench" class="bench"></div><div class="field"><label for="customTeam">Add another team (not in the Top 30)</label><input id="customTeam" maxlength="70" placeholder="Enter any other FBS team"><button class="secondary" id="addTeam" style="margin-top:8px;width:100%" type="button">Add to available teams</button><p class="status" id="teamStatus" aria-live="polite"></p></div><div class="field"><label for="voter">Your name (required)</label><input id="voter" maxlength="80" autocomplete="name" placeholder="First and last name"></div><div class="field"><label for="ballotDate">Ballot date</label><input type="date" id="ballotDate" value="2026-09-26"></div><button class="submit" id="submit">Submit rankings / Save as PDF</button><p class="status" id="status">Your browser's print window will open. Choose <strong>Save as PDF</strong> as the destination.</p><button class="secondary" id="reset">Reset to AP order</button><p class="source">Team pool: September 20, 2026 AP Top 25, plus the five highest-scoring teams under “Others receiving votes”: Washington, Kentucky, West Virginia, Oklahoma and Oklahoma State.<br><a target="_blank" rel="noopener" href="https://www.aol.com/articles/ap-top-25-204710000.html">AP rankings and receiving votes</a></p></aside></div><p class="footer">Single-file, free website. This version includes custom write-in teams and creates a PDF on each voter's device; it does not transmit ballots to an organizer.</p></div>
+<div class="onlyprint" id="printballot"></div>
+<script>
+const all=['Texas','Georgia','Notre Dame','Ole Miss','Indiana','Miami (FL)','Ohio State','Alabama','BYU','LSU','Texas Tech','USC','Penn State','Tennessee','Utah','Louisville','Iowa','Michigan','Missouri','Oregon','Florida','SMU','Texas A&M','Mississippi State','Houston','Washington','Kentucky','West Virginia','Oklahoma','Oklahoma State'];
+const defaultOrder=[...all];let order;
+try{
+  const old=JSON.parse(localStorage.getItem('cfb28-order'));
+  order=Array.isArray(old)&&old.length>=30&&new Set(old.map(x=>typeof x==='string'?x.toLowerCase():x)).size===old.length&&old.every(x=>typeof x==='string'&&x.trim())&&all.every(x=>old.includes(x))?old:defaultOrder.slice();
+}catch{order=defaultOrder.slice()}
+const rankings=document.getElementById('rankings'),bench=document.getElementById('bench'),status=document.getElementById('status');
+const nameBox=document.getElementById('voter'),dateBox=document.getElementById('ballotDate');
+const teamInput=document.getElementById('customTeam'),teamStatus=document.getElementById('teamStatus');
+try{nameBox.value=localStorage.getItem('cfb28-name')||'';dateBox.value=localStorage.getItem('cfb28-date')||'2026-09-26'}catch{}
+function persist(){try{localStorage.setItem('cfb28-order',JSON.stringify(order));localStorage.setItem('cfb28-name',nameBox.value);localStorage.setItem('cfb28-date',dateBox.value)}catch{}}
+function swap(a,b){if(a===b||a<0||b<0||a>=order.length||b>=order.length)return;[order[a],order[b]]=[order[b],order[a]];persist();render()}
+function normalize(t){return t.trim().replace(/\s+/g,' ')}
+function existingTeam(t){return order.findIndex(x=>x.toLocaleLowerCase()===t.toLocaleLowerCase())}
+function addTeamToBench(){
+ const team=normalize(teamInput.value);
+ if(!team){teamStatus.textContent='Enter a team name first.';teamInput.focus();return}
+ if(existingTeam(team)>=0){teamStatus.textContent='That team is already listed. You can drag or swap it into your rankings.';return}
+ order.push(team);teamInput.value='';teamStatus.textContent=team+' added to your available teams.';persist();render();
+}
+function typeTeamAt(rankIndex){
+ const entered=prompt('Type a team for rank #'+(rankIndex+1)+'. Any NCAA Division I FBS team is allowed:',order[rankIndex]);
+ if(entered===null)return;
+ const team=normalize(entered);
+ if(!team){teamStatus.textContent='Team name cannot be empty.';return}
+ const found=existingTeam(team);
+ if(found===rankIndex)return;
+ if(found>=0){swap(rankIndex,found);teamStatus.textContent=team+' moved to #'+(rankIndex+1)+'.';return}
+ const displaced=order[rankIndex];order[rankIndex]=team;order.push(displaced);
+ teamStatus.textContent=team+' added at #'+(rankIndex+1)+'. '+displaced+' moved to available teams.';
+ persist();render();
+}
+function teamNode(index){
+ const t=document.createElement('div');t.className='team';t.draggable=true;t.dataset.index=index;
+ const grip=document.createElement('span');grip.className='grip';grip.textContent='⠿';grip.setAttribute('aria-hidden','true');t.append(grip);
+ const name=document.createElement('span');name.className='name';name.textContent=order[index];t.append(name);
+ const buttons=document.createElement('span');buttons.className='controls';
+ if(index<28){
+   const up=document.createElement('button');up.type='button';up.title='Move up';up.setAttribute('aria-label',`Move ${order[index]} up`);up.textContent='↑';up.disabled=index===0;up.onclick=()=>swap(index,index-1);
+   const down=document.createElement('button');down.type='button';down.title='Move down';down.setAttribute('aria-label',`Move ${order[index]} down`);down.textContent='↓';down.disabled=index===27;down.onclick=()=>swap(index,index+1);
+   const typeBtn=document.createElement('button');typeBtn.type='button';typeBtn.textContent='Type team';typeBtn.title='Type in a different team for this rank';typeBtn.setAttribute('aria-label',`Type team for rank ${index+1}`);typeBtn.onclick=()=>typeTeamAt(index);
+   buttons.append(up,down,typeBtn)
+ }
+ const picker=document.createElement('select');picker.title='Swap this team with a different team';picker.setAttribute('aria-label',`Swap ${order[index]} with`);picker.style.cssText='max-width:58px;font-size:11px;border:1px solid #d4e0e7;border-radius:5px;color:#22506c;background:#fff;padding:5px';
+ const opt=document.createElement('option');opt.value='';opt.textContent='Swap';picker.append(opt);
+ order.forEach((team,j)=>{if(j!==index){let option=document.createElement('option');option.value=j;option.textContent=(j<28?`#${j+1}`:'Extra')+' '+team;picker.append(option)}});
+ picker.onchange=()=>{if(picker.value!=='')swap(index,Number(picker.value))};buttons.append(picker);t.append(buttons);
+ t.addEventListener('dragstart',e=>{e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',String(index))});
+ t.addEventListener('dragover',e=>{e.preventDefault();e.dataTransfer.dropEffect='move';t.classList.add('over')});
+ t.addEventListener('dragleave',()=>t.classList.remove('over'));
+ t.addEventListener('drop',e=>{e.preventDefault();let from=Number(e.dataTransfer.getData('text/plain'));swap(from,index)});
+ t.addEventListener('dragend',()=>{document.querySelectorAll('.over').forEach(n=>n.classList.remove('over'))});return t;
+}
+function render(){rankings.replaceChildren();bench.replaceChildren();order.forEach((team,i)=>{if(i<28){const slot=document.createElement('div');slot.className='slot';let rank=document.createElement('div');rank.className='rank';rank.textContent=i+1;slot.append(rank,teamNode(i));rankings.append(slot)}else{bench.append(teamNode(i))}})}
+document.getElementById('addTeam').addEventListener('click',addTeamToBench);
+teamInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addTeamToBench()}});
+nameBox.addEventListener('input',persist);dateBox.addEventListener('input',persist);
+document.getElementById('reset').addEventListener('click',()=>{if(confirm('Reset all rankings to the original AP poll order?')){order=defaultOrder.slice();teamStatus.textContent='Original 30 teams restored.';persist();render()}});
+document.getElementById('submit').addEventListener('click',()=>{if(!nameBox.value.trim()){status.textContent='Please enter your name before submitting.';nameBox.focus();return}persist();const root=document.getElementById('printballot');root.replaceChildren();const head=document.createElement('header');head.className='printhead';const title=document.createElement('h1');title.textContent='College Football Top 28 Ballot';const voter=document.createElement('p');voter.textContent='Voter: '+nameBox.value.trim();const date=document.createElement('p');date.textContent='Ballot date: '+(dateBox.value||'Not specified')+'  |  Team pool: AP poll of September 20, 2026';head.append(title,voter,date);root.append(head);const table=document.createElement('table');table.className='printed';const thr=document.createElement('tr');['Rank','Team'].forEach(label=>{let th=document.createElement('th');th.textContent=label;thr.append(th)});let thead=document.createElement('thead');thead.append(thr);table.append(thead);let tbody=document.createElement('tbody');order.slice(0,28).forEach((team,i)=>{let tr=document.createElement('tr');let rank=document.createElement('td');rank.textContent=i+1;let name=document.createElement('td');name.textContent=team;tr.append(rank,name);tbody.append(tr)});table.append(tbody);root.append(table);let foot=document.createElement('p');foot.className='printfoot';foot.textContent='Available but not ranked: '+order.slice(28).join(', ');root.append(foot);status.textContent='In the print window, choose “Save as PDF” and save the file.';window.print()});
+render();
+</script>
+</body></html>
