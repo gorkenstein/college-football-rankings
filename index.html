@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>College Football Top 28 Ballot · Custom write-in teams</title>
+<style>
+:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#13273c;background:#eff4f8}*{box-sizing:border-box}
+body{margin:0}.shell{max-width:1420px;margin:26px auto;padding:0 18px}.hero{background:linear-gradient(120deg,#10263e,#17496a);color:white;border-radius:16px;padding:26px 30px;margin-bottom:18px}.hero h1{margin:0 0 9px;font-size:clamp(23px,4vw,35px)}.hero p{margin:4px 0;color:#cce0ec}.layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(320px,1fr);gap:20px;align-items:start}.panel{background:white;border:1px solid #d8e3eb;box-shadow:0 7px 22px #1234  ;border-radius:14px;padding:18px}.panel h2{margin:0 0 8px;font-size:19px}.hint{font-size:13px;color:#536475;line-height:1.5}.tableHead{display:grid;grid-template-columns:55px 1fr 160px 215px;gap:9px;margin:15px 0 7px;color:#4c6478;font-size:12px;text-transform:uppercase;font-weight:700}.ranking{display:grid;gap:6px}.slot{display:grid;grid-template-columns:55px 1fr;gap:9px;align-items:stretch;min-height:41px}.rank{display:flex;align-items:center;justify-content:center;background:#eaf1f7;color:#164264;border-radius:7px;font-weight:750}.team{display:flex;align-items:center;gap:8px;border:1px solid #d6e2ea;border-radius:8px;background:white;padding:7px 10px;cursor:grab;min-width:0;touch-action:pan-y}.team:active{cursor:grabbing}.team .name{font-weight:650;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.muted{font-size:11px;color:#647789}.grip{color:#8da0ae;font-size:19px;line-height:1}.slot.over .team,.bench.over{outline:3px dashed #3883a9;background:#eaf6fc}.bench{display:grid;gap:9px;margin:16px 0}.bench .team{min-height:42px}.controls{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}.team .name{min-width:105px}.h2h{font-size:11px;line-height:1.45;min-width:190px;max-width:235px}.h2h .match{display:block;white-space:normal;margin:2px 0}.h2h .badgeWL{margin-right:4px}.grip{touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;border:1px solid #cbdbe7;border-radius:6px;padding:5px 7px;color:#28688a;background:#eff6fa}.team.drag-source{opacity:.45}.drag-ghost{position:fixed;z-index:9999;pointer-events:none;max-width:min(380px,80vw);box-shadow:0 12px 26px #10263e55;opacity:.96;background:#fff}.drop-target{outline:3px dashed #3883a9!important;background:#eaf6fc!important}.touch-help{display:none}.game{font-size:12px;white-space:nowrap;line-height:1.3;min-width:142px}.game small{display:block;color:#647789;font-size:10px}.badgeWL{display:inline-block;border-radius:4px;padding:1px 5px;font-size:11px;font-weight:850;margin-right:5px}.badgeWL.win{color:#065f46;background:#d1fae5}.badgeWL.loss{color:#991b1b;background:#fee2e2}.noGame{color:#647789;font-size:11px}.bench .team{flex-wrap:wrap}.bench .name{min-width:120px}.bench .game{width:100%;padding-left:28px}.bench .controls{margin-left:auto}.hint strong{color:#233e5b}@media(max-width:1000px){.team{flex-wrap:wrap}.game{min-width:120px}.controls{width:100%;justify-content:flex-end}}.controls button{white-space:nowrap}.controls button{border:1px solid #d4e0e7;background:#f3f8fb;color:#22506c;border-radius:5px;cursor:pointer;padding:5px 7px;font-weight:700}.controls button:hover{background:#ddebfa}.field{margin-top:18px}.field label{display:block;font-weight:700;margin-bottom:6px;font-size:14px}.field input{width:100%;padding:12px;border:1px solid #b9cbd7;border-radius:7px;font:inherit}.submit{margin-top:15px;border:0;background:#11704d;color:#fff;border-radius:9px;padding:14px 20px;width:100%;font:inherit;font-weight:750;cursor:pointer}.submit:hover{background:#0b593c}.secondary{border:1px solid #b9cbd7;background:#fff;border-radius:8px;padding:10px 14px;cursor:pointer}.status{margin:12px 0 0;font-size:13px;color:#42627c}.source{font-size:12px;color:#607284;margin-top:15px;line-height:1.5}.source a{color:#225c83}.onlyprint{display:none}.footer{margin:23px auto;color:#63788a;text-align:center;font-size:12px}@media(max-width:720px){.touch-help{display:block}.h2h{width:100%;max-width:none;padding-left:35px}.layout{grid-template-columns:1fr}.shell{margin:10px auto}.hero{padding:22px}.panel{padding:13px}.team{padding:7px}.controls button{padding:4px 6px}}@media print{@page{size:letter;margin:.5in}body{background:#fff}.shell,.footer{display:none!important}.onlyprint{display:block!important;font-family:Arial,sans-serif;color:#111}.printhead{border-bottom:2px solid #111;padding-bottom:7px;margin-bottom:10px}.printhead h1{font-size:21px;margin:0 0 6px}.printhead p{font-size:11px;margin:4px 0}.printed{width:100%;border-collapse:collapse;font-size:10px}.printed th,.printed td{padding:4px 8px;border-bottom:1px solid #ccc;text-align:left}.printed th:first-child,.printed td:first-child{width:65px}.printfoot{font-size:10px;margin-top:14px;color:#555}}
+
+/* Responsive alignment update: each data item occupies its own true grid column. */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+.shell,.layout,.panel,.ranking,.slot,.team,.bench{min-width:0}
+.tableHead{grid-template-columns:40px 27px minmax(0,1fr) 135px 175px 106px;column-gap:8px;padding:0 2px}.tableHead span:nth-child(1){grid-column:1}.tableHead span:nth-child(2){grid-column:3}.tableHead span:nth-child(3){grid-column:4}.tableHead span:nth-child(4){grid-column:5}
+.slot{grid-template-columns:40px minmax(0,1fr);column-gap:8px}
+.team{display:grid;grid-template-columns:27px minmax(0,1fr) 135px 175px 106px;gap:7px;align-items:center;min-width:0;padding:6px 7px}
+.team .name{min-width:0;overflow-wrap:anywhere;white-space:normal}
+.team .game{min-width:0;width:auto;padding:0;white-space:normal}
+.team .h2h{min-width:0;max-width:none;width:auto;padding:0;overflow-wrap:anywhere}
+.team .controls{width:auto;min-width:0;margin:0;display:flex;flex-wrap:wrap;justify-content:flex-end}
+.team .grip{display:flex;align-items:center;justify-content:center;padding:4px 3px;min-width:0}
+.bench .team{grid-template-columns:27px minmax(0,1fr) 135px;align-items:start}
+.bench .team .game{grid-column:3;grid-row:1}
+.bench .team .h2h{grid-column:2 / -1;grid-row:2}
+.bench .team .controls{grid-column:2 / -1;grid-row:3;justify-content:flex-start}
+@media(max-width:1279px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .shell{max-width:940px}
+}
+@media(max-width:720px){
+  .shell{padding:0 7px;margin:7px auto}
+  .hero{padding:13px 12px;border-radius:10px;margin-bottom:9px}
+  .hero h1{font-size:21px;line-height:1.16}
+  .hero p{font-size:12px;line-height:1.34}
+  .layout{gap:9px}
+  .panel{padding:9px 7px;border-radius:10px}
+  .panel h2{font-size:16px;margin-bottom:4px}
+  .hint{font-size:11px;line-height:1.35}
+  .tableHead{grid-template-columns:25px 19px minmax(0,1fr) minmax(102px,1.1fr);gap:5px;margin:10px 0 5px;padding:0 3px;font-size:10px}
+  .tableHead span:nth-child(1){grid-column:1}
+  .tableHead span:nth-child(2){grid-column:3}
+  .tableHead span:nth-child(3){grid-column:4}
+  .tableHead span:nth-child(4){display:none}
+  .ranking{gap:4px}
+  .slot{grid-template-columns:25px minmax(0,1fr);gap:5px;min-height:0}
+  .rank{font-size:12px}
+  .team{grid-template-columns:19px minmax(0,1fr) minmax(102px,1.1fr);column-gap:5px;row-gap:4px;padding:5px 4px;align-items:center}
+  .team .grip{grid-column:1;grid-row:1;font-size:16px;min-height:30px;padding:4px 1px}
+  .team .name{grid-column:2;grid-row:1;font-size:12px;line-height:1.25;overflow:visible;text-overflow:clip}
+  .team .game{grid-column:3;grid-row:1;font-size:11px;line-height:1.15;min-width:0}
+  .team .game small{font-size:9px;line-height:1.2;white-space:normal;margin-top:2px}
+  .team .badgeWL{font-size:10px;padding:1px 4px;margin-right:3px}
+  .team .h2h{grid-column:2 / 4;grid-row:2;font-size:10px;line-height:1.27;min-width:0;width:100%;padding:3px 0 0;border-top:1px dotted #e2eaf0}
+  .team .h2h::before{content:'Season H2H: ';font-weight:750;color:#526b81}
+  .team .controls{grid-column:2 / 4;grid-row:3;display:flex;gap:3px;width:100%;justify-content:flex-end}
+  .team .controls button{font-size:11px;min-height:27px;padding:2px 7px}
+  .team .controls select{min-height:27px;max-width:110px!important;font-size:11px!important}
+  .bench .team{grid-template-columns:19px minmax(0,1fr) minmax(102px,1.1fr)}
+  .bench .team .game{grid-column:3;grid-row:1;width:auto;padding:0}
+  .bench .team .h2h{grid-column:2 / 4;grid-row:2}
+  .bench .team .controls{grid-column:2 / 4;grid-row:3;justify-content:flex-end}
+  .bench{gap:5px;margin:10px 0}
+  .touch-help{display:block}
+  .footer{font-size:10px}
+}
+@media(max-width:365px){
+  .shell{padding:0 4px}
+  .panel{padding:7px 5px}
+  .team{grid-template-columns:18px minmax(0,1fr) minmax(88px,1.07fr);column-gap:4px}
+  .tableHead{grid-template-columns:23px 18px minmax(0,1fr) minmax(88px,1.07fr);column-gap:4px}
+  .slot{grid-template-columns:23px minmax(0,1fr);gap:4px}
+  .team .name{font-size:11px}
+  .team .game{font-size:10px}
+}
+/* Automatic version check banner */
+.update-alert{position:sticky;top:0;z-index:10000;background:#e8f5ec;border:2px solid #24854c;color:#174b2b;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;box-shadow:0 4px 12px #0001}
+.update-alert[hidden]{display:none}.update-alert button{border:0;background:#176a3d;color:white;padding:9px 14px;border-radius:6px;font:inherit;font-weight:700;cursor:pointer}
+@media print{.update-alert{display:none!important}}
+
+/* Pool sign-in and standings -- comfortable on iPhone */
+.pool-panel{max-width:1420px;margin:0 auto 12px;padding:15px 18px;background:#fff;border:1px solid #d8e3eb;border-radius:14px}
+.pool-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.pool-panel input{font:inherit;padding:9px;border:1px solid #b9cbd7;border-radius:7px;width:100%;min-width:0}
+.pool-panel button{padding:9px;border:1px solid #bdd0db;background:#edf7fc;border-radius:7px;cursor:pointer;font-weight:650}
+.pool-panel .primary{background:#11704d;color:white;border:0}.pool-panel .small{font-size:12px;color:#557184}
+.pool-table{width:100%;border-collapse:collapse;font-size:13px}.pool-table th,.pool-table td{border-bottom:1px solid #e4ebf1;padding:7px;text-align:left}
+.pool-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.pool-hidden{display:none!important}
+@media(max-width:720px){.pool-panel{margin:5px 7px;padding:10px}.pool-cols{grid-template-columns:1fr}.pool-table{font-size:12px}}
+@media print{.pool-panel{display:none!important}}
+/* Sunday game data freshness displayed without consuming iPhone width. */
+.score-freshness{font-size:12px;line-height:1.35;padding:8px 12px;margin:0 0 10px;background:#e9f2f7;color:#163d52;border:1px solid #b7d3e5;border-radius:8px}
+.score-freshness strong{font-weight:750}
+@media(max-width:720px){.score-freshness{font-size:10px;padding:6px 9px;margin:0 0 6px}}
+@media print{.score-freshness{display:none!important}}
+
+/* Signed-in voter's scored-ballot detail */
+.pool-score-card{margin-top:14px;padding:14px;border:1px solid #cbdbe7;border-radius:11px;background:#f8fbfd}
+.pool-score-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.pool-score-head h3{margin:0 0 3px}.pool-score-total{font-size:22px;font-weight:800;color:#123f5a;margin:8px 0 10px}
+.pool-score-card .pool-table th:nth-child(1),.pool-score-card .pool-table td:nth-child(1){text-align:center;width:58px}
+.pool-score-card .pool-table th:nth-child(3),.pool-score-card .pool-table td:nth-child(3),
+.pool-score-card .pool-table th:nth-child(4),.pool-score-card .pool-table td:nth-child(4),
+.pool-score-card .pool-table th:nth-child(5),.pool-score-card .pool-table td:nth-child(5){text-align:center;white-space:nowrap}
+.pool-score-card tr.not-scored{color:#667887;background:#f2f5f7}.pool-score-card td.pts-pos{font-weight:800;color:#0a6548}.pool-score-card td.pts-neg{font-weight:800;color:#9a2525}.pool-score-card td.pts-zero{font-weight:800;color:#5f6870}
+@media(max-width:720px){.pool-score-card{padding:10px}.pool-score-card .pool-table{font-size:11px}.pool-score-total{font-size:19px}}
+@media print{.pool-score-card{display:none!important}}
+.pool-player-link{appearance:none;border:0!important;background:none!important;padding:0!important;color:#176a8c!important;text-decoration:underline;cursor:pointer;font:inherit;font-weight:750}
+.pool-player-link:hover{color:#0d4f69!important}.pool-player-link:focus-visible{outline:2px solid #176a8c;outline-offset:2px;border-radius:3px}
+.pool-score-week-wrap{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:8px 0}
+.pool-score-week-wrap label{font-size:12px;font-weight:750;color:#557184}
+.pool-score-week-wrap select{font:inherit;font-size:12px;padding:6px 8px;border:1px solid #b9cbd7;border-radius:7px;background:#fff}
+</style>
+<meta name="ballot-version" content="2026-10-04.2">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+</head>
+<body>
+<div id="updateAlert" class="update-alert" role="status" aria-live="polite" hidden>
+  <span><strong>New ballot version available.</strong> Your saved picks will remain in this browser.</span>
+  <button type="button" id="updateNow">Update now</button>
+</div>
+
+<section class="pool-panel" id="poolPanel">
+  <h2 style="margin:0 0 7px">🏆 Football pool: sign in &amp; standings</h2>
+  <p class="small">Use a separate account for each voter. You can change your ballot until Sunday at 1 PM Eastern. The PDF button below still works separately.</p>
+  <div id="poolAuth" class="pool-cols">
+    <input id="poolDisplay" autocomplete="name" maxlength="80" placeholder="Your leaderboard display name" aria-label="Display name">
+    <input id="poolEmail" type="email" autocomplete="email" placeholder="Email" aria-label="Email">
+    <input id="poolPass" type="password" autocomplete="current-password" minlength="8" placeholder="Password (8+ characters)" aria-label="Password">
+    <div class="pool-actions"><button id="poolSignup" type="button">Create account</button><button id="poolLogin" type="button" class="primary">Sign in</button></div>
+  </div>
+  <div class="pool-actions"><span id="poolWho" class="small"></span><button id="poolLogout" class="pool-hidden" type="button">Sign out</button><button id="poolSave" class="primary pool-hidden" type="button">Submit / update my ballot online</button><button id="poolScored" class="pool-hidden" type="button">View my scored ballot</button></div>
+  <p id="poolMessage" class="small" role="status" aria-live="polite">Online submissions become available after the Supabase database setup is complete.</p>
+  <h3 style="margin-bottom:5px">Season standings</h3>
+  <p class="small" style="margin:0 0 7px">After a week is scored, signed-in pool members can tap a player's name to view that player's completed ballot. Ballots remain private before scoring.</p>
+  <div style="overflow-x:auto"><table class="pool-table"><thead><tr><th>Place</th><th>Player</th><th>Weeks</th><th>Season total</th></tr></thead><tbody id="poolLeaderboard"><tr><td colspan="4">Standings will appear when verified AP polls have been scored.</td></tr></tbody></table></div>
+  <section id="poolScoreCard" class="pool-score-card pool-hidden" aria-live="polite">
+    <div class="pool-score-head">
+      <div><h3 id="poolScoreTitle">Scored ballot</h3><p id="poolScoreMeta" class="small" style="margin:0"></p></div>
+      <div class="pool-actions" style="margin-top:0"><button id="poolScorePdf" class="primary" type="button">Save scored ballot as PDF</button><button id="poolScoreClose" type="button">Hide</button></div>
+    </div>
+    <div id="poolScoreWeekWrap" class="pool-score-week-wrap pool-hidden"><label for="poolScoreWeek">Week</label><select id="poolScoreWeek" aria-label="Choose scored week"></select></div>
+    <div id="poolScoreTotal" class="pool-score-total"></div>
+    <div style="overflow-x:auto"><table class="pool-table"><thead><tr><th>Your rank</th><th>Team</th><th>AP rank</th><th>Positions off</th><th>Points</th></tr></thead><tbody id="poolScoreRows"></tbody></table></div>
+    <p class="small" style="margin:9px 0 0">Scoring: exact +3; one rank off +2; two off +1; three off 0; four or more off, or outside the AP comparison Top 28, −1. Ballot positions 26–28 are shown for reference but are not scored.</p>
+  </section>
+</section>
+<div class="shell"><div class="hero"><h1>🏈 Your College Football Top 28</h1><p>2026 AP Top 25 · released September 27, 2026</p><p>Rank your Top 28 from all <strong>40 teams receiving AP votes</strong>, review each team’s most recent score, and create your PDF ballot.</p></div>
+<p class="score-freshness" id="scoreFreshness" aria-live="polite"><strong>Game information:</strong> September 26 fallback snapshot. Automated Sunday refresh pending.</p><div class="layout"><section class="panel"><h2>Your rankings</h2><div class="hint">Drag the ⠿ handle to reorder, including on phones. You can also use ↑, ↓ or Swap. The season matchup column highlights opponents in the current AP Top 25 (after the Sunday refresh). Your changes are saved in this browser.<span class="touch-help"><strong>On phones:</strong> press and hold the ⠿ handle, then slide a team onto its destination.</span></div><div class="tableHead"><span>Rank</span><span>Team</span><span>Last game</span><span>Season head-to-head</span></div><div class="ranking" id="rankings"></div></section>
+<aside class="panel"><h2>Available teams</h2><div class="hint">Includes <strong>every team receiving AP poll votes</strong> (25 ranked + 15 others). Drag a team into your rankings or use its Swap menu. To add a team that did not receive votes, use the write-in box below.</div><div id="bench" class="bench"></div><div class="field"><label for="customTeam">Add a write-in team (not in the poll)</label><input id="customTeam" maxlength="70" placeholder="Enter any other FBS team"><button class="secondary" id="addTeam" style="margin-top:8px;width:100%" type="button">Add to available teams</button><p class="status" id="teamStatus" aria-live="polite"></p></div><div class="field"><label for="voter">Your name (required)</label><input id="voter" maxlength="80" autocomplete="name" placeholder="First and last name"></div><div class="field"><label for="ballotDate">Ballot date</label><input type="date" id="ballotDate" value="2026-09-29"></div><button class="submit" id="submit">Submit rankings / Save as PDF</button><p class="status" id="status">Your browser's print window will open. Choose <strong>Save as PDF</strong> as the destination.</p><button class="secondary" id="reset">Reset to AP order</button><p class="source">Team pool: September 27, 2026 AP Top 25, plus <strong>all 15</strong> additional vote-receiving teams. The automatic head-to-head column shows 2026 games against AP Top 25 teams in the active ballot pool. The scores below show the latest successful Sunday refresh when available, otherwise the September 26 fallback. Write-in teams show no verified score.<br><a target="_blank" rel="noopener" href="https://www.ncaa.com/rankings/football/fbs/associated-press">AP rankings and receiving votes</a> · <a target="_blank" rel="noopener" href="https://www.ncaa.com/live-updates/football/fbs/college-football-week-4-recaps-highlights-rankings-and-scores">NCAA scores</a></p></aside></div><p class="footer">Single-file, free website. Game results refresh from the shared Supabase snapshot early Sunday morning once the refresh service is deployed. The eligible team pool remains the September 27 AP list until a separate weekly-poll importer is installed. Verified AP poll scoring and standings are published automatically after the Sunday poll is available.</p></div>
+<div class="onlyprint" id="printballot"></div>
+<script>
+const all=["Texas", "Georgia", "Notre Dame", "Miami (FL)", "Ohio State", "Indiana", "Alabama", "Florida", "Ole Miss", "BYU", "LSU", "Texas Tech", "Utah", "Iowa", "Oregon", "Mississippi State", "Tennessee", "USC", "Oklahoma State", "Houston", "SMU", "Boise State", "UCLA", "Kentucky", "Missouri", "Wisconsin", "Duke", "Penn State", "Wake Forest", "Virginia Tech", "Michigan", "Pittsburgh", "Nebraska", "Louisville", "Cincinnati", "James Madison", "Arizona", "Minnesota", "North Dakota State", "Northwestern"];
+let gameResults={"Texas": {"result": "W", "score": "20–17", "opponent": "Tennessee", "date": "Sep 26"}, "Georgia": {"result": "W", "score": "41–13", "opponent": "Oklahoma", "date": "Sep 26"}, "Notre Dame": {"result": "W", "score": "49–10", "opponent": "Purdue", "date": "Sep 26"}, "Miami (FL)": {"result": "W", "score": "52–3", "opponent": "Central Michigan", "date": "Sep 26"}, "Ohio State": {"result": "W", "score": "42–19", "opponent": "Illinois", "date": "Sep 26"}, "Indiana": {"result": "W", "score": "29–23", "opponent": "Northwestern", "date": "Sep 25"}, "Alabama": {"result": "W", "score": "49–18", "opponent": "South Carolina", "date": "Sep 26"}, "Florida": {"result": "W", "score": "52–28", "opponent": "Ole Miss", "date": "Sep 26"}, "Ole Miss": {"result": "L", "score": "28–52", "opponent": "Florida", "date": "Sep 26"}, "BYU": {"result": "W", "score": "41–23", "opponent": "Colorado State", "date": "Sep 19"}, "LSU": {"result": "W", "score": "35–6", "opponent": "Texas A&M", "date": "Sep 26"}, "Texas Tech": {"result": "W", "score": "49–14", "opponent": "Sam Houston", "date": "Sep 26"}, "Utah": {"result": "W", "score": "31–17", "opponent": "Iowa State", "date": "Sep 26"}, "Iowa": {"result": "W", "score": "20–19", "opponent": "Michigan", "date": "Sep 26"}, "Oregon": {"result": "W", "score": "41–27", "opponent": "USC", "date": "Sep 26"}, "Mississippi State": {"result": "W", "score": "31–24", "opponent": "Missouri", "date": "Sep 26"}, "Tennessee": {"result": "L", "score": "17–20", "opponent": "Texas", "date": "Sep 26"}, "USC": {"result": "L", "score": "27–41", "opponent": "Oregon", "date": "Sep 26"}, "Oklahoma State": {"result": "W", "score": "41–24", "opponent": "West Virginia", "date": "Sep 26"}, "Houston": {"result": "W", "score": "42–28", "opponent": "Georgia Southern", "date": "Sep 26"}, "SMU": {"result": "W", "score": "34–24", "opponent": "Missouri State", "date": "Sep 26"}, "Boise State": {"result": "W", "score": "32–7", "opponent": "Western Michigan", "date": "Sep 26"}, "UCLA": {"result": "W", "score": "54–3", "opponent": "Maryland", "date": "Sep 26"}, "Kentucky": {"result": "W", "score": "45–21", "opponent": "South Alabama", "date": "Sep 26"}, "Missouri": {"result": "L", "score": "24–31", "opponent": "Mississippi State", "date": "Sep 26"}, "Wisconsin": {"result": "W", "score": "24–20", "opponent": "Penn State", "date": "Sep 26"}, "Duke": {"result": "W", "score": "62–7", "opponent": "William & Mary", "date": "Sep 26"}, "Penn State": {"result": "L", "score": "20–24", "opponent": "Wisconsin", "date": "Sep 26"}, "Wake Forest": {"result": "W", "score": "30–27", "opponent": "Louisville", "date": "Sep 26"}, "Virginia Tech": {"result": "W", "score": "21–14", "opponent": "Boston College", "date": "Sep 26"}, "Michigan": {"result": "L", "score": "19–20", "opponent": "Iowa", "date": "Sep 26"}, "Pittsburgh": {"result": "W", "score": "59–0", "opponent": "Bucknell", "date": "Sep 26"}, "Nebraska": {"result": "W", "score": "31–13", "opponent": "Michigan State", "date": "Sep 26"}, "Louisville": {"result": "L", "score": "27–30", "opponent": "Wake Forest", "date": "Sep 26"}, "Cincinnati": {"result": "W", "score": "31–26", "opponent": "Kansas State", "date": "Sep 26"}, "James Madison": {"result": "W", "score": "46–20", "opponent": "Old Dominion", "date": "Sep 26"}, "Arizona": {"result": "W", "score": "34–24", "opponent": "Washington State", "date": "Sep 26"}, "Minnesota": {"result": "W", "score": "27–24", "opponent": "Washington", "date": "Sep 26"}, "North Dakota State": {"result": "W", "score": "31–10", "opponent": "Sacramento State", "date": "Sep 19"}, "Northwestern": {"result": "L", "score": "23–29", "opponent": "Indiana", "date": "Sep 25"}};
+// Verified 2026 head-to-head games, listed winner-first; the same game is shown on both teams' rows.
+// Add future matchups here to update the static season snapshot.
+let seasonGames = [
+  ["Oregon","Boise State",34,27,"Sep 5"],
+  ["Notre Dame","Wisconsin",41,13,"Sep 6"],
+  ["Ole Miss","Louisville",41,38,"Sep 6"],
+  ["Texas","Ohio State",24,23,"Sep 12"],
+  ["Miami (FL)","Wake Forest",33,20,"Sep 18"],
+  ["Texas Tech","Houston",28,26,"Sep 18"],
+  ["Ole Miss","LSU",32,24,"Sep 19"],
+  ["Indiana","Northwestern",29,23,"Sep 25"],
+  ["Wake Forest","Louisville",30,27,"Sep 26"],
+  ["Texas","Tennessee",20,17,"Sep 26"],
+  ["Florida","Ole Miss",52,28,"Sep 26"],
+  ["Iowa","Michigan",20,19,"Sep 26"],
+  ["Oregon","USC",41,27,"Sep 26"],
+  ["Wisconsin","Penn State",24,20,"Sep 26"],
+  ["Mississippi State","Missouri",31,24,"Sep 26"]
+].filter(([winner, loser, , , date]) => date && all.includes(winner) && all.includes(loser));
+function seasonMatchupNode(team){
+ const group=document.createElement('span');group.className='h2h';
+ let games=seasonGames.filter(g=>g[0]===team||g[1]===team).sort((a,b)=>Date.parse(b[5]||b[4]+' 2026')-Date.parse(a[5]||a[4]+' 2026'));
+ if(!games.length){group.textContent='—';group.title='No verified matchup against a team in this poll is recorded here';return group}
+ games.forEach(([winner,loser,ws,ls,date])=>{
+   const won=winner===team,opponent=won?loser:winner;
+   const span=document.createElement('span');span.className='match';
+   const badge=document.createElement('b');badge.className='badgeWL '+(won?'win':'loss');badge.textContent=won?'W':'L';
+   span.append(badge,document.createTextNode((won?ws:ls)+'–'+(won?ls:ws)+' vs '+opponent+' · '+date));group.append(span);
+ });return group
+}
+const defaultOrder=[...all];let order;
+try{
+  const old=JSON.parse(localStorage.getItem('cfb28-sep27-order'));
+  order=Array.isArray(old)&&old.length>=40&&new Set(old.map(x=>typeof x==='string'?x.toLowerCase():x)).size===old.length&&old.every(x=>typeof x==='string'&&x.trim())&&all.every(x=>old.includes(x))?old:defaultOrder.slice();
+}catch{order=defaultOrder.slice()}
+const rankings=document.getElementById('rankings'),bench=document.getElementById('bench'),status=document.getElementById('status');
+const nameBox=document.getElementById('voter'),dateBox=document.getElementById('ballotDate');
+const teamInput=document.getElementById('customTeam'),teamStatus=document.getElementById('teamStatus');
+try{nameBox.value=localStorage.getItem('cfb28-sep27-name')||'';dateBox.value=localStorage.getItem('cfb28-sep27-date')||'2026-09-29'}catch{}
+function persist(){try{localStorage.setItem('cfb28-sep27-order',JSON.stringify(order));localStorage.setItem('cfb28-sep27-name',nameBox.value);localStorage.setItem('cfb28-sep27-date',dateBox.value)}catch{}}
+function swap(a,b){if(a===b||a<0||b<0||a>=order.length||b>=order.length)return;[order[a],order[b]]=[order[b],order[a]];persist();render()}
+function normalize(t){return t.trim().replace(/\s+/g,' ')}
+function existingTeam(t){return order.findIndex(x=>x.toLocaleLowerCase()===t.toLocaleLowerCase())}
+function addTeamToBench(){
+ const team=normalize(teamInput.value);
+ if(!team){teamStatus.textContent='Enter a team name first.';teamInput.focus();return}
+ if(existingTeam(team)>=0){teamStatus.textContent='That team is already listed. You can drag or swap it into your rankings.';return}
+ order.push(team);teamInput.value='';teamStatus.textContent=team+' added to your available teams.';persist();render();
+}
+
+function teamNode(index){
+ const t=document.createElement('div');t.className='team';t.draggable=true;t.dataset.index=index;
+ const grip=document.createElement('span');grip.className='grip';grip.textContent='⠿';grip.title='Drag this handle to move the team';grip.setAttribute('aria-label','Drag to reorder');grip.setAttribute('role','img');grip.addEventListener('pointerdown',e=>startPointerDrag(e,index,t));t.append(grip);
+ const name=document.createElement('span');name.className='name';name.textContent=order[index];t.append(name);
+ const game=document.createElement('span');game.className='game';const r=gameResults[order[index]];if(r){const b=document.createElement('b');b.className='badgeWL '+(r.result==='W'?'win':'loss');b.textContent=r.result;game.append(b,document.createTextNode(r.score));const detail=document.createElement('small');detail.textContent='vs '+r.opponent+' · '+r.date;game.append(detail)}else{game.className+=' noGame';game.textContent='Write-in · no score'}t.append(game,seasonMatchupNode(order[index]));
+ const buttons=document.createElement('span');buttons.className='controls';
+ if(index<28){
+   const up=document.createElement('button');up.type='button';up.title='Move up';up.setAttribute('aria-label',`Move ${order[index]} up`);up.textContent='↑';up.disabled=index===0;up.onclick=()=>swap(index,index-1);
+   const down=document.createElement('button');down.type='button';down.title='Move down';down.setAttribute('aria-label',`Move ${order[index]} down`);down.textContent='↓';down.disabled=index===27;down.onclick=()=>swap(index,index+1);
+   buttons.append(up,down)
+ }
+ const picker=document.createElement('select');picker.title='Swap this team with a different team';picker.setAttribute('aria-label',`Swap ${order[index]} with`);picker.style.cssText='max-width:58px;font-size:11px;border:1px solid #d4e0e7;border-radius:5px;color:#22506c;background:#fff;padding:5px';
+ const opt=document.createElement('option');opt.value='';opt.textContent='Swap';picker.append(opt);
+ order.forEach((team,j)=>{if(j!==index){let option=document.createElement('option');option.value=j;option.textContent=(j<28?`#${j+1}`:'Extra')+' '+team;picker.append(option)}});
+ picker.onchange=()=>{if(picker.value!=='')swap(index,Number(picker.value))};buttons.append(picker);t.append(buttons);
+ t.addEventListener('dragstart',e=>{e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',String(index))});
+ t.addEventListener('dragover',e=>{e.preventDefault();e.dataTransfer.dropEffect='move';t.classList.add('over')});
+ t.addEventListener('dragleave',()=>t.classList.remove('over'));
+ t.addEventListener('drop',e=>{e.preventDefault();let from=Number(e.dataTransfer.getData('text/plain'));swap(from,index)});
+ t.addEventListener('dragend',()=>{document.querySelectorAll('.over').forEach(n=>n.classList.remove('over'))});return t;
+}
+let pointerDrag=null;
+function startPointerDrag(e,index,node){
+ if(e.pointerType==='mouse')return; // native desktop HTML5 drag remains supported
+ if(!e.isPrimary)return;
+ e.preventDefault();
+ const rect=node.getBoundingClientRect();const ghost=node.cloneNode(true);
+ ghost.className='team drag-ghost';ghost.style.width=Math.min(rect.width,360)+'px';
+ ghost.style.left=Math.max(5,Math.min(innerWidth-rect.width,e.clientX-rect.width/2))+'px';ghost.style.top=(e.clientY-25)+'px';
+ document.body.append(ghost);node.classList.add('drag-source');
+ pointerDrag={id:e.pointerId,from:index,source:node,ghost,target:null};
+ document.addEventListener('pointermove',movePointerDrag,{passive:false});
+ document.addEventListener('pointerup',finishPointerDrag);
+ document.addEventListener('pointercancel',cancelPointerDrag);
+}
+function movePointerDrag(e){
+ if(!pointerDrag||e.pointerId!==pointerDrag.id)return;
+ e.preventDefault();const d=pointerDrag;
+ const w=d.ghost.getBoundingClientRect().width;
+ d.ghost.style.left=Math.max(3,Math.min(innerWidth-w,e.clientX-w/2))+'px';d.ghost.style.top=(e.clientY-25)+'px';
+ const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('.team[data-index]');
+ document.querySelectorAll('.drop-target').forEach(n=>n.classList.remove('drop-target'));
+ d.target=target && target!==d.source?Number(target.dataset.index):null;
+ if(target&&d.target!==null)target.classList.add('drop-target');
+ if(e.clientY>innerHeight-65)window.scrollBy(0,14);
+ if(e.clientY<75)window.scrollBy(0,-14);
+}
+function clearPointerDrag(){
+ if(!pointerDrag)return;pointerDrag.source.classList.remove('drag-source');pointerDrag.ghost.remove();pointerDrag=null;
+ document.querySelectorAll('.drop-target').forEach(n=>n.classList.remove('drop-target'));
+ document.removeEventListener('pointermove',movePointerDrag);
+ document.removeEventListener('pointerup',finishPointerDrag);
+ document.removeEventListener('pointercancel',cancelPointerDrag);
+}
+function finishPointerDrag(e){
+ if(!pointerDrag||e.pointerId!==pointerDrag.id)return;
+ const {from,target}=pointerDrag;clearPointerDrag();if(target!==null)swap(from,target);
+}
+function cancelPointerDrag(){clearPointerDrag()}
+function render(){rankings.replaceChildren();bench.replaceChildren();order.forEach((team,i)=>{if(i<28){const slot=document.createElement('div');slot.className='slot';let rank=document.createElement('div');rank.className='rank';rank.textContent=i+1;slot.append(rank,teamNode(i));rankings.append(slot)}else{bench.append(teamNode(i))}})}
+document.getElementById('addTeam').addEventListener('click',addTeamToBench);
+teamInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addTeamToBench()}});
+nameBox.addEventListener('input',persist);dateBox.addEventListener('input',persist);
+document.getElementById('reset').addEventListener('click',()=>{if(confirm('Reset all rankings to the original AP poll order?')){order=defaultOrder.slice();teamStatus.textContent='Original 40 teams restored.';persist();render()}});
+document.getElementById('submit').addEventListener('click',()=>{if(!nameBox.value.trim()){status.textContent='Please enter your name before submitting.';nameBox.focus();return}persist();const root=document.getElementById('printballot');root.replaceChildren();const head=document.createElement('header');head.className='printhead';const title=document.createElement('h1');title.textContent='College Football Top 28 Ballot';const voter=document.createElement('p');voter.textContent='Voter: '+nameBox.value.trim();const date=document.createElement('p');date.textContent='Ballot date: '+(dateBox.value||'Not specified')+'  |  Team pool: AP poll of September 27, 2026';head.append(title,voter,date);root.append(head);const table=document.createElement('table');table.className='printed';const thr=document.createElement('tr');['Rank','Team','Last result','Season vs. poll teams'].forEach(label=>{let th=document.createElement('th');th.textContent=label;thr.append(th)});let thead=document.createElement('thead');thead.append(thr);table.append(thead);let tbody=document.createElement('tbody');order.slice(0,28).forEach((team,i)=>{let tr=document.createElement('tr');let rank=document.createElement('td');rank.textContent=i+1;let name=document.createElement('td');name.textContent=team;let score=document.createElement('td');let r=gameResults[team];score.textContent=r?(r.result+' '+r.score+' vs '+r.opponent):'Write-in';const match=document.createElement('td');const g=seasonGames.filter(g=>g[0]===team||g[1]===team);match.textContent=g.length?g.map(([w,l,a,b,d])=>(team===w?'W '+a+'–'+b+' vs '+l:'L '+b+'–'+a+' vs '+w)+' ('+d+')').join('; '):'—';tr.append(rank,name,score,match);tbody.append(tr)});table.append(tbody);root.append(table);let foot=document.createElement('p');foot.className='printfoot';foot.textContent='Available but not ranked: '+order.slice(28).join(', ');root.append(foot);status.textContent='In the print window, choose “Save as PDF” and save the file.';window.print()});
+render();
+
+
+/* Supabase pool: the publishable key is browser-safe because all writes are restricted by database rules. */
+const poolDb = window.supabase?.createClient(
+  'https://ulzfaxuathyarwynlhxr.supabase.co',
+  'sb_publishable_1MNI2F6Jlp_B98Yo1mbxuA_v4HjyrQd'
+);
+let poolUser=null, poolWeek=null;
+let poolLatestScored=null, poolScoredDetail=null;
+const poolMsg=document.getElementById('poolMessage');
+const poolSay=(s)=>{poolMsg.textContent=s};
+function poolAuthView(){
+ document.getElementById('poolAuth').classList.toggle('pool-hidden',!!poolUser);
+ document.getElementById('poolSave').classList.toggle('pool-hidden',!poolUser);
+ document.getElementById('poolLogout').classList.toggle('pool-hidden',!poolUser);
+ if(!poolUser){
+  document.getElementById('poolScored').classList.add('pool-hidden');
+  document.getElementById('poolScoreCard').classList.add('pool-hidden');
+  poolLatestScored=null;poolScoredDetail=null;
+ }
+ document.getElementById('poolWho').textContent=poolUser?'Signed in as '+(poolUser.email||'player'):'';
+}
+let lastGameSnapshotAt = '';
+async function poolGameLoad(){
+ if(!poolDb||!poolWeek)return;
+ const banner=document.getElementById('scoreFreshness');
+ const {data,error}=await poolDb.from('pool_game_snapshots')
+   .select('latest_results,h2h_games,team_count,covered_team_count,source_label,updated_at')
+   .eq('week_id',poolWeek.id).maybeSingle();
+ if(error){banner.textContent='Game information: static September 26 snapshot. Sunday results connection not enabled yet.';return}
+ if(!data){banner.textContent='Game information: September 26 snapshot. Sunday refresh has not completed for this ballot.';return}
+ if(data.updated_at===lastGameSnapshotAt)return; // Preserve manual dragging and avoid unnecessary re-render.
+ if(!data.latest_results||!Array.isArray(data.h2h_games))return;
+ lastGameSnapshotAt=data.updated_at;
+ // Only accept payloads that match names and types used by this page.
+ const accepted={};
+ for(const [team,r] of Object.entries(data.latest_results)){
+  if(all.includes(team)&&r&&typeof r==='object'&&['W','L','T'].includes(r.result)
+       &&typeof r.score==='string'&&typeof r.opponent==='string'&&typeof r.date==='string'){
+    accepted[team]={result:r.result,score:r.score,opponent:r.opponent,date:r.date};
+  }
+ }
+ gameResults={...gameResults,...accepted}; // Missing teams retain their previous verified game.
+ seasonGames=data.h2h_games.filter(g=>Array.isArray(g)&&g.length>=5&&
+   all.includes(g[0])&&all.includes(g[1])&&Number.isFinite(g[2])&&Number.isFinite(g[3]));
+ render();
+ const stamp=new Date(data.updated_at).toLocaleString('en-US',
+  {timeZone:'America/New_York',weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+ banner.textContent='Game information refreshed: '+stamp+' Eastern · '+
+   data.covered_team_count+'/'+data.team_count+' teams have a completed game on the data feed. '+
+   'Season H2H includes games against teams in the AP Top 25 on this ballot. '+
+   (data.covered_team_count<data.team_count?'Missing feed results retain their previous verified scores.':'');
+}
+// If a voter leaves the browser open Sunday morning, check for new score snapshots.
+setInterval(()=>{if(!document.hidden&&poolWeek)poolGameLoad().catch(()=>{})},5*60*1000);
+document.addEventListener('visibilitychange',()=>{
+ if(!document.hidden&&poolWeek)poolGameLoad().catch(()=>{});
+});
+async function poolWeekLoad(){
+ const {data,error}=await poolDb.from('pool_weeks').select('id,label,deadline_at').gt('deadline_at',new Date().toISOString()).order('deadline_at').limit(1);
+ if(error)throw error;
+ poolWeek=data?.[0]||null;
+ if(poolWeek){await poolGameLoad();poolSay('Current cutoff: '+new Date(poolWeek.deadline_at).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'full',timeStyle:'short'})+' Eastern. Save your picks before the cutoff.');
+ if(poolUser){const b=await poolDb.from('pool_ballots').select('picks').eq('week_id',poolWeek.id).maybeSingle();
+ if(b.data?.picks?.length===28)poolSay('Your online ballot is already saved for '+poolWeek.label+'. You may update it before the deadline.');}}
+ else poolSay('No upcoming week is configured. Rankings and PDFs still work locally.');
+}
+async function poolStandings(){
+ const {data,error}=await poolDb.from('pool_scores').select('user_id,display_name,points,week_id');
+ if(error)throw error;
+ const players=new Map();
+ for(const s of data||[]){
+  const v=players.get(s.user_id)||{id:s.user_id,name:s.display_name,total:0,weeks:0};
+  v.total+=s.points;v.weeks++;players.set(s.user_id,v);
+ }
+ const board=[...players.values()].sort((a,b)=>b.total-a.total||b.weeks-a.weeks||a.name.localeCompare(b.name));
+ const root=document.getElementById('poolLeaderboard');root.replaceChildren();
+ if(!board.length){
+  const r=root.insertRow();const c=r.insertCell();c.colSpan=4;
+  c.textContent='No published scores yet. Standings appear after the AP results are verified.';
+  return;
+ }
+ board.forEach((p,i)=>{
+  const r=root.insertRow();
+  r.insertCell().textContent=i+1;
+  const nameCell=r.insertCell();
+  if(poolUser){
+   const btn=document.createElement('button');
+   btn.type='button';
+   btn.className='pool-player-link';
+   btn.textContent=p.name;
+   btn.title='View '+p.name+"'s scored ballot";
+   btn.onclick=()=>poolShowScoredBallotFor(p.id,null,p.name)
+     .catch(e=>poolSay('Could not load scored ballot: '+e.message));
+   nameCell.append(btn);
+  }else{
+   nameCell.textContent=p.name;
+  }
+  r.insertCell().textContent=p.weeks;
+  r.insertCell().textContent=p.total;
+ });
+}
+async function poolScoredAvailability(){
+ const btn=document.getElementById('poolScored');
+ btn.classList.add('pool-hidden');
+ poolLatestScored=null;
+ if(!poolDb||!poolUser)return;
+ const {data,error}=await poolDb.from('pool_scores')
+   .select('week_id,user_id,display_name,points,breakdown')
+   .eq('user_id',poolUser.id)
+   .order('week_id',{ascending:false})
+   .limit(1);
+ if(error)return;
+ poolLatestScored=data?.[0]||null;
+ if(poolLatestScored)btn.classList.remove('pool-hidden');
+}
+function poolRankLookup(top28,team){
+ if(!Array.isArray(top28)||!team)return null;
+ const n=String(team).trim().toLocaleLowerCase();
+ const i=top28.findIndex(t=>String(t).trim().toLocaleLowerCase()===n);
+ return i>=0?i+1:null;
+}
+async function poolPlayerWeeks(userId){
+ const {data,error}=await poolDb.from('pool_scores')
+   .select('week_id,display_name,points')
+   .eq('user_id',userId)
+   .order('week_id',{ascending:false});
+ if(error)throw error;
+ const scoreRows=data||[];
+ if(!scoreRows.length)return [];
+ const ids=[...new Set(scoreRows.map(x=>x.week_id))];
+ const {data:weeks,error:weekError}=await poolDb.from('pool_weeks')
+   .select('id,label')
+   .in('id',ids);
+ if(weekError)throw weekError;
+ const labels=new Map((weeks||[]).map(w=>[w.id,w.label]));
+ return scoreRows.map(s=>({
+  weekId:s.week_id,
+  label:labels.get(s.week_id)||('Week '+s.week_id),
+  points:Number(s.points),
+  displayName:s.display_name
+ }));
+}
+async function poolShowScoredBallotFor(userId,weekId=null,knownName=''){
+ if(!poolUser){
+  poolSay('Sign in to view completed ballots from other pool members.');
+  return;
+ }
+ const weeks=await poolPlayerWeeks(userId);
+ if(!weeks.length){
+  poolSay('No scored ballot is available for that player yet.');
+  return;
+ }
+ const selected=weeks.find(w=>Number(w.weekId)===Number(weekId))||weeks[0];
+
+ const {data,error}=await poolDb.rpc('pool_view_scored_ballot',{
+  p_week:selected.weekId,
+  p_user:userId
+ });
+ if(error){
+  poolSay('Could not load that scored ballot: '+error.message);
+  return;
+ }
+ const row=Array.isArray(data)?data[0]:data;
+ if(!row){
+  poolSay('That ballot is not available. Completed ballots become viewable only after the AP poll is published.');
+  return;
+ }
+
+ const detail=Array.isArray(row.breakdown)?[...row.breakdown]:[];
+ detail.sort((a,b)=>Number(a.pick_rank)-Number(b.pick_rank));
+ const picks=Array.isArray(row.picks)?row.picks:[];
+ const top28=Array.isArray(row.top28)?row.top28:[];
+ const rows=[];
+
+ for(let rank=1;rank<=25;rank++){
+  const d=detail.find(x=>Number(x.pick_rank)===rank)||{};
+  const team=d.team||picks[rank-1]||'—';
+  const apRank=Number.isFinite(Number(d.ap_rank))?Number(d.ap_rank):null;
+  rows.push({
+   rank,team,apRank,
+   off:apRank===null?'—':Math.abs(rank-apRank),
+   points:Number(d.points),
+   scored:true
+  });
+ }
+ for(let rank=26;rank<=28;rank++){
+  const team=picks[rank-1]||'—';
+  const apRank=poolRankLookup(top28,team);
+  rows.push({
+   rank,team,apRank,
+   off:apRank===null?'—':Math.abs(rank-apRank),
+   points:null,
+   scored:false
+  });
+ }
+
+ const displayName=row.display_name||knownName||selected.displayName||'Player';
+ poolScoredDetail={
+  userId,
+  weekId:selected.weekId,
+  weekLabel:row.week_label||selected.label,
+  displayName,
+  total:Number(row.points),
+  rows,
+  submittedAt:row.submitted_at||null,
+  publishedAt:row.published_at||null,
+  sourceUrl:row.source_url||''
+ };
+
+ const mine=poolUser&&userId===poolUser.id;
+ document.getElementById('poolScoreTitle').textContent=
+   mine?'My scored ballot':'Scored ballot — '+displayName;
+ document.getElementById('poolScoreMeta').textContent=
+   poolScoredDetail.weekLabel+' · AP comparison Top 28';
+ document.getElementById('poolScoreTotal').textContent=
+   'Weekly score: '+poolScoredDetail.total+' / 75';
+
+ const weekWrap=document.getElementById('poolScoreWeekWrap');
+ const weekSelect=document.getElementById('poolScoreWeek');
+ weekSelect.replaceChildren();
+ for(const w of weeks){
+  const opt=document.createElement('option');
+  opt.value=String(w.weekId);
+  opt.textContent=w.label+' — '+w.points+' points';
+  opt.selected=Number(w.weekId)===Number(selected.weekId);
+  weekSelect.append(opt);
+ }
+ weekWrap.classList.toggle('pool-hidden',weeks.length<2);
+ weekSelect.onchange=()=>poolShowScoredBallotFor(
+   userId,
+   Number(weekSelect.value),
+   displayName
+ ).catch(e=>poolSay('Could not load scored ballot: '+e.message));
+
+ const body=document.getElementById('poolScoreRows');body.replaceChildren();
+ for(const scoreRow of rows){
+  const tr=body.insertRow();
+  if(!scoreRow.scored)tr.className='not-scored';
+  tr.insertCell().textContent=scoreRow.rank;
+  tr.insertCell().textContent=scoreRow.team;
+  tr.insertCell().textContent=scoreRow.apRank===null?'NR':scoreRow.apRank;
+  tr.insertCell().textContent=scoreRow.off;
+  const pts=tr.insertCell();
+  if(!scoreRow.scored){
+   pts.textContent='Not scored';
+  }else{
+   pts.textContent=(scoreRow.points>0?'+':'')+scoreRow.points;
+   pts.className=scoreRow.points>0?'pts-pos':scoreRow.points<0?'pts-neg':'pts-zero';
+  }
+ }
+
+ const card=document.getElementById('poolScoreCard');
+ card.classList.remove('pool-hidden');
+ card.scrollIntoView({behavior:'smooth',block:'start'});
+}
+async function poolShowScoredBallot(){
+ if(!poolUser){
+  poolSay('Sign in to view your scored ballot.');
+  return;
+ }
+ await poolShowScoredBallotFor(poolUser.id);
+}
+function poolPrintScoredBallot(){
+ if(!poolScoredDetail)return;
+ const d=poolScoredDetail;
+ const root=document.getElementById('printballot');root.replaceChildren();
+ const head=document.createElement('header');head.className='printhead';
+ const title=document.createElement('h1');title.textContent='College Football Ballot — Scored';
+ const voter=document.createElement('p');voter.textContent='Voter: '+d.displayName+' | Week: '+d.weekLabel;
+ const total=document.createElement('p');total.textContent='Total Score: '+d.total+' points (maximum possible: 75)';
+ head.append(title,voter,total);root.append(head);
+ const table=document.createElement('table');table.className='printed';
+ const thr=document.createElement('tr');['Your Rank','Team','AP Rank','Positions Off','Points'].forEach(label=>{const th=document.createElement('th');th.textContent=label;thr.append(th)});
+ const thead=document.createElement('thead');thead.append(thr);table.append(thead);
+ const tbody=document.createElement('tbody');
+ d.rows.forEach(row=>{const tr=document.createElement('tr');[row.rank,row.team,row.apRank===null?'NR':row.apRank,row.off,row.scored?row.points:'Not scored'].forEach(v=>{const td=document.createElement('td');td.textContent=String(v);tr.append(td)});tbody.append(tr)});
+ table.append(tbody);root.append(table);
+ const rules=document.createElement('p');rules.className='printfoot';rules.textContent='Rules: Ballot positions 1–25 only. Exact +3; 1 rank off +2; 2 off +1; 3 off 0; 4+ off or absent from the AP comparison Top 28: −1. Ballot positions 26–28 are shown for reference and are not scored.';root.append(rules);
+ if(d.sourceUrl){const source=document.createElement('p');source.className='printfoot';source.textContent='Official AP comparison source: '+d.sourceUrl;root.append(source)}
+ window.print();
+}
+async function poolInitialize(){
+ if(!poolDb){poolSay('Unable to load Supabase. Check internet access or your browser content blockers.');return}
+ try{
+  const sess=await poolDb.auth.getUser();poolUser=sess.data.user||null;poolAuthView();
+  await poolWeekLoad();await poolStandings();await poolScoredAvailability();
+  poolDb.auth.onAuthStateChange((_event,session)=>{
+   poolUser=session?.user||null;
+   poolAuthView();
+   poolScoredAvailability().catch(()=>{});
+   poolStandings().catch(()=>{});
+  });
+ }catch(e){poolSay('Pool setup not ready: '+e.message)}
+}
+document.getElementById('poolSignup').onclick=async()=>{
+ if(!poolDb)return;
+ const email=document.getElementById('poolEmail').value.trim(),password=document.getElementById('poolPass').value;
+ const display_name=document.getElementById('poolDisplay').value.trim();
+ if(display_name.length<2||!email||password.length<8){poolSay('Enter a display name, email, and password (at least 8 characters).');return}
+ poolSay('Creating account…');
+ const r=await poolDb.auth.signUp({email,password,options:{data:{display_name},emailRedirectTo:location.origin+location.pathname}});
+ if(r.error){poolSay(r.error.message);return}
+ poolSay(r.data.session?'Account created. You can now submit your ballot.':'Account created. Check your email for a confirmation link, then sign in.');
+};
+document.getElementById('poolLogin').onclick=async()=>{
+ if(!poolDb)return;
+ const r=await poolDb.auth.signInWithPassword({email:document.getElementById('poolEmail').value.trim(),password:document.getElementById('poolPass').value});
+ if(r.error){poolSay(r.error.message);return}
+ poolUser=r.data.user;poolAuthView();await poolWeekLoad();await poolScoredAvailability();await poolStandings();
+};
+document.getElementById('poolLogout').onclick=async()=>{
+ if(poolDb){
+  await poolDb.auth.signOut();
+  poolUser=null;
+  poolAuthView();
+  document.getElementById('poolScoreCard').classList.add('pool-hidden');
+  await poolStandings().catch(()=>{});
+  poolSay('Signed out. Your locally saved rankings remain on this device.');
+ }
+};
+document.getElementById('poolSave').onclick=async()=>{
+ if(!poolUser){poolSay('Please sign in first.');return}
+ if(!poolWeek){poolSay('No open week configured.');return}
+ if(Date.now()>=new Date(poolWeek.deadline_at).getTime()){poolSay('The deadline has passed.');return}
+ const name=nameBox.value.trim();
+ if(!name){poolSay('Enter your voter name in the ballot form first.');nameBox.focus();return}
+ poolSay('Saving your ballot securely…');
+ const profile=await poolDb.from('pool_profiles').update({display_name:name}).eq('user_id',poolUser.id);
+ if(profile.error){poolSay('Could not save your display name: '+profile.error.message);return}
+ const {data,error}=await poolDb.rpc('pool_submit',{p_week:poolWeek.id,p_picks:order.slice(0,28)});
+ poolSay(error?'Submission not saved: '+error.message:'Ballot submitted! Server receipt: '+new Date(data).toLocaleString()+'. You may still save a PDF below.');
+};
+document.getElementById('poolScored').onclick=()=>poolShowScoredBallot().catch(e=>poolSay('Could not load scored ballot: '+e.message));
+document.getElementById('poolScorePdf').onclick=poolPrintScoredBallot;
+document.getElementById('poolScoreClose').onclick=()=>document.getElementById('poolScoreCard').classList.add('pool-hidden');
+poolInitialize();
+
+/* Automatic Version Checking (AVC).
+   Upload version.json alongside index.html and bump its "version" when publishing.
+   Check on load, every 5 minutes, and whenever the tab becomes visible.
+   Refresh automatically if idle, but never interrupt a recently active voter. */
+const BALLOT_VERSION = document.querySelector('meta[name="ballot-version"]').content;
+const updateAlert = document.getElementById('updateAlert');
+const updateNow = document.getElementById('updateNow');
+let latestVersion = null;
+const pageOpenedAt = Date.now();
+let lastInteraction = pageOpenedAt;
+let versionCheckInProgress = false;
+let refreshInProgress = false;
+let initialCheck = true;
+const ACTIVITY_GRACE_MS = 2 * 60 * 1000;
+['pointerdown','keydown','input','touchstart'].forEach(eventName =>
+  document.addEventListener(eventName, () => { lastInteraction = Date.now(); }, {passive:true}));
+function updateToLatest(){
+  if (refreshInProgress || !latestVersion) return;
+  // Do not reload in a loop if a caching proxy returns stale HTML.
+  if (new URLSearchParams(location.search).get('v') === latestVersion) return;
+  refreshInProgress = true;
+  persist();
+  const url = new URL(location.href);
+  url.searchParams.set('v', latestVersion);
+  location.replace(url.href);
+}
+async function checkBallotVersion(){
+  if (versionCheckInProgress || refreshInProgress) return;
+  versionCheckInProgress = true;
+  try {
+    const url = new URL('version.json', location.href);
+    url.searchParams.set('check', String(Date.now()));
+    const response = await fetch(url.href, {cache:'no-store'});
+    if (!response.ok) throw new Error('Version file unavailable');
+    const data = await response.json();
+    if (typeof data.version !== 'string' || !data.version.trim()) throw new Error('Invalid version file');
+    if (data.version !== BALLOT_VERSION) {
+      latestVersion = data.version;
+      if (new URLSearchParams(location.search).get('v') === latestVersion) {
+        // An update was requested, but old HTML remains cached. Avoid a reload loop.
+        updateAlert.querySelector('span').textContent = 'A new version exists, but your browser is still showing an older copy. Try closing this tab and reopening the site.';
+        updateAlert.hidden = false;
+        updateNow.hidden = true;
+      } else if ((initialCheck && lastInteraction === pageOpenedAt) || Date.now() - lastInteraction >= ACTIVITY_GRACE_MS) {
+        // On opening, or after the voter has been idle, update without extra taps.
+        updateToLatest();
+      } else {
+        // Avoid reloading while someone is dragging or preparing a ballot.
+        updateAlert.hidden = false;
+      }
+    }
+  } catch (err) {
+    // Offline / first publish without version.json: keep the ballot usable.
+    console.info('Ballot update check skipped:', err.message);
+  } finally {
+    initialCheck = false;
+    versionCheckInProgress = false;
+  }
+}
+updateNow.addEventListener('click', updateToLatest);
+checkBallotVersion();
+setInterval(checkBallotVersion, 5 * 60 * 1000);
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) checkBallotVersion();
+});
+</script>
+</body></html>
+
